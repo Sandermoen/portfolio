@@ -1,27 +1,15 @@
-import React, { useContext } from "react"
-
-import Context from "../store/context"
+import React from "react"
 
 import Layout from "../components/Layout/Layout"
+import Hero from "../components/Hero/Hero"
 import SEO from "../components/SEO/SEO"
+// import Spinner from "../components/Spinner/Spinner"
 
 const IndexPage = () => {
-  const { dispatch } = useContext(Context)
-
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <button
-        onClick={event => {
-          event.preventDefault()
-          dispatch({ type: "TOGGLE_DARK_MODE" })
-        }}
-      >
-        Toggle dark mode
-      </button>
+      <Hero />
     </Layout>
   )
 }

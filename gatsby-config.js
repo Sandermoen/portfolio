@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sander Saksenvik Moen`,
+    title: `S`,
     description: `My Portfolio`,
     author: `@sandersmoen`,
   },
@@ -11,6 +11,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
       },
     },
     `gatsby-transformer-sharp`,
@@ -26,7 +34,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],

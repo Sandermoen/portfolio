@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { Fragment, useContext } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Fragment>
       <GlobalReset isDark={state.isDark} />
       <Helmet>
         <link
@@ -30,20 +30,8 @@ const Layout = ({ children }) => {
         />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      <main>{children}</main>
+    </Fragment>
   )
 }
 
