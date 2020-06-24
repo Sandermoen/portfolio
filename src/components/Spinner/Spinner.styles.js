@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import Spinner from "../svg/../spinner.svg"
+import Spinner from "../../svg/spinner.svg"
 
 const dash = keyframes`
   to {

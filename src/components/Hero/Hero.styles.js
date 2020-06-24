@@ -49,9 +49,5 @@ export const HeroImage = styled(Img)`
 export const HeroCallToAction = styled(Button)`
   opacity: 0;
   ${animation(slideInLeft, 500)};
-  animation-fill-mode: both;
-`
-
-export const Emphasized = styled.span`
-  color: ${props => props.theme.primaryColor};
+  animation-fill-mode: forwards;
 `

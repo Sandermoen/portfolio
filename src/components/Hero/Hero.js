@@ -8,7 +8,6 @@ import {
   HeroImage,
   HeroCallToAction,
   HeroContent,
-  Emphasized,
 } from "./Hero.styles"
 import Context from "../../store/context"
 
@@ -29,12 +28,10 @@ const Hero = () => {
   `)
 
   return (
-    <HeroSection>
+    <HeroSection id="hero-section">
       <Container>
         <HeroContent>
-          <HeroTitle isDark={state.isDark}>
-            I'm <Emphasized>Sander</Emphasized>
-          </HeroTitle>
+          <HeroTitle isDark={state.isDark}>I’m Sander</HeroTitle>
           <HeroInfo isDark={state.isDark}>Front End Developer</HeroInfo>
           <HeroCallToAction>Contact Me</HeroCallToAction>
         </HeroContent>

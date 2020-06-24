@@ -5,6 +5,7 @@ import Context from "../../store/context"
 import { HeaderContainer, HeaderLogo } from "./Header.styles"
 
 import Container from "../Container/Container"
+import ThemeToggler from "../ThemeToggler/ThemeToggler"
 
 const Header = ({ siteTitle }) => {
   const { state } = useContext(Context)
@@ -12,8 +13,14 @@ const Header = ({ siteTitle }) => {
     <HeaderContainer isDark={state.isDark}>
       <Container>
         <h1>
-          <HeaderLogo to="/">{siteTitle}</HeaderLogo>
+          <HeaderLogo href="/#hero-section" to="/">
+            {siteTitle}
+          </HeaderLogo>
         </h1>
+        <ThemeToggler />
+        {/* <nav>
+          <ul></ul>
+        </nav> */}
       </Container>
     </HeaderContainer>
   )
