@@ -10,6 +10,10 @@ export const GlobalReset = createGlobalStyle`
   *::after,
   *::before {
     box-sizing: inherit;
+    
+    /* Transition for theme toggle */
+    transition: 200ms ease-out;
+    transition-property: background-color, color, box-shadow;
   }
 
   html {

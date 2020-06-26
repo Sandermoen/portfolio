@@ -24,7 +24,9 @@ export const ThemeTogglerButton = styled.button`
     height: 2rem;
     border-radius: 100px;
     background-color: ${props =>
-      props.isDark ? props.theme.light.accent1 : props.theme.dark.accent1};
+      props.isDark
+        ? props.theme.dark.background1
+        : props.theme.light.background1};
     left: ${props => (props.isDark ? "2px" : "calc(100% - 2rem - 2px)")};
     top: 50%;
     transform: translateY(-50%) scale(1.3);

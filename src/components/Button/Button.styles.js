@@ -1,10 +1,31 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-export const StyledButton = styled.button`
-  padding: 2rem 6rem;
+const invertedColors = css`
+  color: ${props => props.theme.primaryColor};
+  background: transparent;
+  border: 2px solid ${props => props.theme.primaryColor};
+
+  &:hover {
+    color: ${props =>
+      props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+    background-color: ${props => props.theme.primaryColor};
+  }
+`
+
+const solidColors = css`
   color: ${props =>
     props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
   background-color: ${props => props.theme.primaryColor};
+
+  &:hover {
+    color: ${props => props.theme.primaryColor};
+    background: transparent;
+    border: 2px solid ${props => props.theme.primaryColor};
+  }
+`
+
+export const StyledButton = styled.button`
+  padding: 2rem 6rem;
   font-family: inherit;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -15,11 +36,7 @@ export const StyledButton = styled.button`
   transition: 300ms;
   transition-property: background-color, transform;
 
-  &:hover {
-    color: ${props => props.theme.primaryColor};
-    background: transparent;
-    border: 2px solid ${props => props.theme.primaryColor};
-  }
+  ${props => (props.inverted ? invertedColors : solidColors)}
 
   &:focus {
     outline: none;

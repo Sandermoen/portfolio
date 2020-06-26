@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Instaclone",
+    "url": "https://www.instaclone.net/",
+    "githubUrl": "https://github.com/Sandermoen/instaclone",
+    "desktopImage": "../src/images/instaclone-desktop.png",
+    "mobileGIF": "../src/GIFs/instaclone-mobile.gif",
+    "description": "A fully functional, fully responsive clone of the popular social network Instagram. Made using the MERN stack and socket.io for realtime notifications so you can interact with your friends."
+  },
+  {
+    "title": "CRWN Clothing",
+    "url": "https://crwn-clothing-prod.herokuapp.com/",
+    "githubUrl": "https://github.com/Sandermoen/crwn-clothing",
+    "desktopImage": "../src/images/crwnclothing-desktop.png",
+    "mobileGIF": "../src/GIFs/instaclone-mobile.gif",
+    "description": "Clothing E-Commerce app built with React, Redux, Passportjs, Firebase and Stripe."
+  },
+  {
+    "title": "Portfolio",
+    "url": "https://crwn-clothing-prod.herokuapp.com/",
+    "githubUrl": "https://github.com/Sandermoen/crwn-clothing",
+    "desktopImage": "../src/images/crwnclothing-desktop.png",
+    "mobileGIF": "../src/GIFs/instaclone-mobile.gif",
+    "description": "The website you are currently viewing! Made with Gatsbyjs, Graphql and Styled Components."
+  }
+]
