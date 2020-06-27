@@ -6,15 +6,13 @@ const invertedColors = css`
   border: 2px solid ${props => props.theme.primaryColor};
 
   &:hover {
-    color: ${props =>
-      props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+    color: ${props => props.theme.accent1};
     background-color: ${props => props.theme.primaryColor};
   }
 `
 
 const solidColors = css`
-  color: ${props =>
-    props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+  color: ${props => props.theme.accent1};
   background-color: ${props => props.theme.primaryColor};
 
   &:hover {

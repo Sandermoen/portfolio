@@ -16,8 +16,7 @@ export const HeroSection = styled.section`
 
 export const HeroTitle = styled.h1`
   font-size: 8rem;
-  color: ${props =>
-    props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+  color: ${props => props.theme.accent1};
   ${animation(slideInLeft, 200)};
   opacity: 0;
   animation-fill-mode: both;
@@ -25,8 +24,7 @@ export const HeroTitle = styled.h1`
 
 export const HeroInfo = styled.h3`
   font-size: 2.5rem;
-  color: ${props =>
-    props.isDark ? props.theme.dark.accent2 : props.theme.light.accent2};
+  color: ${props => props.theme.accent2};
   font-weight: 400;
   opacity: 0;
   ${animation(slideInLeft, 300)};

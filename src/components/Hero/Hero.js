@@ -9,12 +9,13 @@ import {
   HeroCallToAction,
   HeroContent,
 } from "./Hero.styles"
-import Context from "../../store/context"
+
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 
 import Container from "../Container/Container"
 
 const Hero = () => {
-  const { state } = useContext(Context)
+  const { isDark } = useContext(ThemeManagerContext)
   const data = useStaticQuery(graphql`
     query HeroImageQuery {
       file(relativePath: { eq: "person.png" }) {
@@ -31,8 +32,8 @@ const Hero = () => {
     <HeroSection id="hero-section">
       <Container>
         <HeroContent>
-          <HeroTitle isDark={state.isDark}>I’m Sander</HeroTitle>
-          <HeroInfo isDark={state.isDark}>Front End Developer</HeroInfo>
+          <HeroTitle isDark={isDark}>I’m Sander</HeroTitle>
+          <HeroInfo isDark={isDark}>Front End Developer</HeroInfo>
           <HeroCallToAction>Contact Me</HeroCallToAction>
         </HeroContent>
         <HeroImage

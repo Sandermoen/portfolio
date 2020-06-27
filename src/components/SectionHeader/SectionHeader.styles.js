@@ -1,8 +1,7 @@
 import styled from "styled-components"
 
 export const StyledSectionHeader = styled.h2`
-  color: ${props =>
-    props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+  color: ${props => props.theme.accent1};
   font-size: 5rem;
   text-align: center;
   position: relative;

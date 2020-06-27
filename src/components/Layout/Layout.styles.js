@@ -19,10 +19,7 @@ export const GlobalReset = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background-color: ${props =>
-      props.isDark
-        ? props.theme.dark.background1
-        : props.theme.light.background1};
+    background-color: ${props => props.theme.background1};
     scroll-behavior: smooth;
   }
 

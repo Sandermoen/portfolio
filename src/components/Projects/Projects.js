@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Context from "../../store/context"
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 
 import { ProjectsSection, ProjectsContent } from "./Projects.styles"
 
@@ -10,9 +10,7 @@ import Container from "../Container/Container"
 import Project from "../Project/Project"
 
 const Projects = () => {
-  const {
-    allProjectsJson: { edges: projects },
-  } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
       allProjectsJson {
         edges {
@@ -25,7 +23,9 @@ const Projects = () => {
                 }
               }
             }
-            mobileGIF
+            mobileGIF {
+              publicURL
+            }
             title
             url
             githubUrl
@@ -34,14 +34,14 @@ const Projects = () => {
       }
     }
   `)
-  const { state } = useContext(Context)
+  const { isDark } = useContext(ThemeManagerContext)
 
   return (
-    <ProjectsSection id="projects-section" isDark={state.isDark}>
+    <ProjectsSection id="projects-section" isDark={isDark}>
       <Container>
         <ProjectsContent>
-          <SectionHeader isDark={state.isDark}>Personal Projects</SectionHeader>
-          {projects.map(project => (
+          <SectionHeader isDark={isDark}>Personal Projects</SectionHeader>
+          {data.allProjectsJson.edges.map(project => (
             <Project key={project.node.title} project={project.node} />
           ))}
         </ProjectsContent>

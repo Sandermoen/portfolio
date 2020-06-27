@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `S`,
+    title: `Sander Saksenvik Moen`,
     description: `My Portfolio`,
     author: `@sandersmoen`,
   },
@@ -11,6 +11,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gif`,
+        path: `${__dirname}/src/GIFs`,
       },
     },
     {
@@ -27,6 +34,27 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: {
+          primaryColor: "#feb633",
+          accent1: "#423f38",
+          accent2: "#eaa62f",
+          accent3: "#b37f24",
+          background1: "#efedea",
+          background2: "#faf9f8",
+        },
+        dark: {
+          primaryColor: "#feb633",
+          accent1: "#faf9f8",
+          accent2: "#fecb71",
+          accent3: "#8e641c",
+          background1: "#222831",
+          background2: "#232d3a",
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
@@ -35,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Sander Saksenvik Moen`,
+        short_name: `Sander`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

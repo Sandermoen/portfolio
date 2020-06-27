@@ -1,18 +1,12 @@
 import styled, { css } from "styled-components"
 
 const scrolledStyling = css`
-  background-color: ${props =>
-    props.isDark
-      ? props.theme.dark.background2
-      : props.theme.light.background2};
+  background-color: ${props => props.theme.background2};
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
 `
 
 export const HeaderContainer = styled.header`
-  background-color: ${props =>
-    props.isDark
-      ? props.theme.dark.background1
-      : props.theme.light.background1};
+  background-color: ${props => props.theme.background1};
   ${props => props.scrolledStyling && scrolledStyling};
   transition: 200ms ease-out;
   transition-property: background-color, box-shadow;

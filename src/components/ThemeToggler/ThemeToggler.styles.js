@@ -5,8 +5,7 @@ export const ThemeTogglerButton = styled.button`
   height: 2.5rem;
   border-radius: 50px;
   border: none;
-  background-color: ${props =>
-    props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+  background-color: ${props => props.theme.accent1};
   font-size: 1.5rem;
   position: relative;
   cursor: pointer;
@@ -23,11 +22,8 @@ export const ThemeTogglerButton = styled.button`
     width: 2rem;
     height: 2rem;
     border-radius: 100px;
-    background-color: ${props =>
-      props.isDark
-        ? props.theme.dark.background1
-        : props.theme.light.background1};
-    left: ${props => (props.isDark ? "2px" : "calc(100% - 2rem - 2px)")};
+    background-color: ${props => props.theme.background1};
+    left: ${props => (props.theme.isDark ? "2px" : "calc(100% - 2rem - 2px)")};
     top: 50%;
     transform: translateY(-50%) scale(1.3);
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
@@ -38,7 +34,7 @@ export const ThemeTogglerButton = styled.button`
 
   & > span {
     position: absolute;
-    ${props => (props.isDark ? "right: 5px;" : "left: 5px;")}
+    ${props => (props.theme.isDark ? "right: 5px;" : "left: 5px;")}
     top: 50%;
     transform: translateY(-50%);
   }

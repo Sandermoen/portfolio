@@ -11,8 +11,7 @@ export const ProjectTitle = styled.h1`
 `
 
 export const ProjectDetails = styled.p`
-  color: ${props =>
-    props.isDark ? props.theme.dark.accent1 : props.theme.light.accent1};
+  color: ${props => props.theme.accent1};
   font-size: 2rem;
   margin-bottom: 2rem;
 `

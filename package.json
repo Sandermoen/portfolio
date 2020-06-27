@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-source-filesystem": "^2.3.11",
+    "gatsby-styled-components-dark-mode": "^1.2.0",
     "gatsby-transformer-json": "^2.4.7",
     "gatsby-transformer-sharp": "^2.5.5",
     "local-storage-fallback": "^4.1.1",

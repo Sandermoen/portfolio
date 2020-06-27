@@ -1,15 +1,14 @@
 import React, { Fragment, useContext } from "react"
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
-
-import Context from "../../store/context"
 
 import { GlobalReset } from "./Layout.styles"
 import Header from "../Header/Header"
 
 const Layout = ({ children }) => {
-  const { state } = useContext(Context)
+  const { isDark } = useContext(ThemeManagerContext)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,7 +21,7 @@ const Layout = ({ children }) => {
 
   return (
     <Fragment>
-      <GlobalReset isDark={state.isDark} />
+      <GlobalReset isDark={isDark} />
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"

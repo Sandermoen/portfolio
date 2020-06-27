@@ -9,20 +9,18 @@ import {
   ButtonContainter,
 } from "./Project.styles"
 
-import Context from "../../store/context"
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
+
 import Showcase from "../Showcase/Showcase"
 
 const Project = ({ project }) => {
-  const { state } = useContext(Context)
-
+  const { isDark } = useContext(ThemeManagerContext)
   return (
     <ProjectContainer>
       <ProjectArticle>
         <ProjectTitle>{project.title}</ProjectTitle>
 
-        <ProjectDetails isDark={state.isDark}>
-          {project.description}
-        </ProjectDetails>
+        <ProjectDetails isDark={isDark}>{project.description}</ProjectDetails>
 
         <ButtonContainter>
           <ProjectCallToAction link={project.url}>
@@ -33,7 +31,10 @@ const Project = ({ project }) => {
           </ProjectCallToAction>
         </ButtonContainter>
       </ProjectArticle>
-      <Showcase media={project.desktopImage.childImageSharp.fluid} />
+      <Showcase
+        media={project.desktopImage.childImageSharp.fluid}
+        gif={project.mobileGIF.publicURL}
+      />
     </ProjectContainer>
   )
 }

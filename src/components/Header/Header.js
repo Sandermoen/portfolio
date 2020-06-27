@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import throttle from "lodash/throttle"
 
-import Context from "../../store/context"
+import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
+
 import { HeaderContainer, HeaderLogo, HeaderContent } from "./Header.styles"
 
 import Container from "../Container/Container"
 import ThemeToggler from "../ThemeToggler/ThemeToggler"
 import Navigation from "../Navigation/Navigation"
 
-const Header = ({ siteTitle }) => {
-  const { state } = useContext(Context)
+const Header = () => {
+  const { isDark } = useContext(ThemeManagerContext)
   const [scrolledStyling, setScrolledStyling] = useState(false)
 
   useEffect(() => {
@@ -33,11 +34,11 @@ const Header = ({ siteTitle }) => {
   }, [setScrolledStyling])
 
   return (
-    <HeaderContainer isDark={state.isDark} scrolledStyling={scrolledStyling}>
+    <HeaderContainer isDark={isDark} scrolledStyling={scrolledStyling}>
       <Container>
         <h1>
           <HeaderLogo href="/#hero-section" to="/">
-            {siteTitle}
+            S
           </HeaderLogo>
         </h1>
         <HeaderContent>

@@ -12,8 +12,8 @@
     "url": "https://crwn-clothing-prod.herokuapp.com/",
     "githubUrl": "https://github.com/Sandermoen/crwn-clothing",
     "desktopImage": "../src/images/crwnclothing-desktop.png",
-    "mobileGIF": "../src/GIFs/instaclone-mobile.gif",
-    "description": "Clothing E-Commerce app built with React, Redux, Passportjs, Firebase and Stripe."
+    "mobileGIF": "../src/GIFs/crwnclothing-mobile.gif",
+    "description": "CRWN Clothing is a progressive E-Commerce clothing web app built with React, Redux, Passportjs, Firebase and Stripe."
   },
   {
     "title": "Portfolio",
@@ -21,6 +21,6 @@
     "githubUrl": "https://github.com/Sandermoen/crwn-clothing",
     "desktopImage": "../src/images/crwnclothing-desktop.png",
     "mobileGIF": "../src/GIFs/instaclone-mobile.gif",
-    "description": "The website you are currently viewing! Made with Gatsbyjs, Graphql and Styled Components."
+    "description": "The website you are currently viewing! Made with Gatsbyjs, GraphQL and Styled Components."
   }
 ]

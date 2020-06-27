@@ -1,13 +1,11 @@
 import React from "react"
 
-import mobileGIF from "../../GIFs/instaclone-mobile.gif"
-
 import { ShowcaseImg, ShowcaseGIF, ShowcaseContainer } from "./Showcase.styles"
 
-const Showcase = ({ media }) => (
+const Showcase = ({ media, gif }) => (
   <ShowcaseContainer>
     <ShowcaseImg fadeIn={false} fluid={media} alt="Project" />
-    <ShowcaseGIF src={mobileGIF} />
+    <ShowcaseGIF src={gif} />
   </ShowcaseContainer>
 )
 
