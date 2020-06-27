@@ -1,12 +1,19 @@
 import React from "react"
 
-import { NavigationNav } from "./Navigation.styles"
+import {
+  NavigationNav,
+  NavigationContainer,
+  NavigationLink,
+} from "./Navigation.styles"
 
 const Navigation = () => (
   <NavigationNav>
-    <ul>
-      <li>test</li>
-    </ul>
+    <NavigationContainer>
+      <NavigationLink href="/#hero-section">Home</NavigationLink>
+      <NavigationLink href="/#projects-section">Projects</NavigationLink>
+      <NavigationLink>About Me</NavigationLink>
+      <NavigationLink>Get In Touch</NavigationLink>
+    </NavigationContainer>
   </NavigationNav>
 )
 

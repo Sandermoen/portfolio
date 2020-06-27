@@ -16,7 +16,12 @@ import Showcase from "../Showcase/Showcase"
 const Project = ({ project }) => {
   const { isDark } = useContext(ThemeManagerContext)
   return (
-    <ProjectContainer>
+    <ProjectContainer
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-easing="ease-out-back"
+      data-sal-duration="1000"
+    >
       <ProjectArticle>
         <ProjectTitle>{project.title}</ProjectTitle>
 

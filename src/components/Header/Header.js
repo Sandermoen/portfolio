@@ -10,7 +10,7 @@ import Container from "../Container/Container"
 import ThemeToggler from "../ThemeToggler/ThemeToggler"
 import Navigation from "../Navigation/Navigation"
 
-const Header = () => {
+const Header = ({ refs }) => {
   const { isDark } = useContext(ThemeManagerContext)
   const [scrolledStyling, setScrolledStyling] = useState(false)
 
@@ -42,7 +42,7 @@ const Header = () => {
           </HeaderLogo>
         </h1>
         <HeaderContent>
-          {/* <Navigation /> */}
+          <Navigation refs={refs} />
           <ThemeToggler />
         </HeaderContent>
       </Container>

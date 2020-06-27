@@ -26,4 +26,5 @@ export const HeaderLogo = styled.a`
 export const HeaderContent = styled.div`
   margin-left: auto;
   display: flex;
+  align-items: center;
 `
