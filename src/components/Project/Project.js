@@ -38,7 +38,7 @@ const Project = ({ project }) => {
       </ProjectArticle>
       <Showcase
         media={project.desktopImage.childImageSharp.fluid}
-        gif={project.mobileGIF.publicURL}
+        video={project.mobileVideo.publicURL}
       />
     </ProjectContainer>
   )

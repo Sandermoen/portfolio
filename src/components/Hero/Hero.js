@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <HeroSection id="hero-section">
-      <Container>
+      <Container section="Home">
         <HeroContent>
           <HeroTitle isDark={isDark}>I’m Sander</HeroTitle>
           <HeroInfo isDark={isDark}>Front End Developer</HeroInfo>

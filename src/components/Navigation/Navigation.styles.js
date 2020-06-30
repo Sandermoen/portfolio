@@ -17,14 +17,14 @@ export const NavigationLink = styled.a`
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
-
-  &:visited {
-    color: currentColor;
-  }
+  color: currentColor;
 
   ${props =>
     props.active &&
     `border-bottom: 2px solid ${props => props.theme.primaryColor}`}
 
   padding-bottom: 5px;
+  ${props =>
+    props.activeSection === props.children &&
+    `border-bottom: 2px solid ${props.theme.primaryColor}`}
 `

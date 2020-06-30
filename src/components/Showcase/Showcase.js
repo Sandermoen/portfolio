@@ -1,11 +1,15 @@
 import React from "react"
 
-import { ShowcaseImg, ShowcaseGIF, ShowcaseContainer } from "./Showcase.styles"
+import {
+  ShowcaseImg,
+  ShowcaseVideo,
+  ShowcaseContainer,
+} from "./Showcase.styles"
 
-const Showcase = ({ media, gif }) => (
+const Showcase = ({ media, video }) => (
   <ShowcaseContainer>
     <ShowcaseImg fadeIn={false} fluid={media} alt="Project" />
-    <ShowcaseGIF src={gif} />
+    <ShowcaseVideo src={video} autoPlay muted />
   </ShowcaseContainer>
 )
 

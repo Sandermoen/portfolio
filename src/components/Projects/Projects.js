@@ -23,7 +23,7 @@ const Projects = () => {
                 }
               }
             }
-            mobileGIF {
+            mobileVideo {
               publicURL
             }
             title
@@ -38,7 +38,7 @@ const Projects = () => {
 
   return (
     <ProjectsSection id="projects-section" isDark={isDark}>
-      <Container>
+      <Container section="Projects">
         <ProjectsContent>
           <SectionHeader isDark={isDark}>Personal Projects</SectionHeader>
           {data.allProjectsJson.edges.map(project => (
